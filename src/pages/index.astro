@@ -1,17 +1,74 @@
 ---
-import Container from "@/components/container.astro";
-import Cta from "@/components/cta.astro";
-import Features from "@/components/features.astro";
-import Hero from "@/components/hero.astro";
-import Logos from "@/components/logos.astro";
-import Layout from "@/layouts/Layout.astro";
+import Layout from '@/layouts/Layout.astro';
+import Features from '@/components/Features';
+import CodeDemo from '@/components/CodeDemo';
 ---
 
-<Layout title="">
-  <Container>
-    <Hero />
-    <Features />
-    <Logos />
-    <Cta />
-  </Container>
+<Layout title="Home">
+  <!-- Hero Section -->
+  <section class="relative py-32 bg-capicu-beige">
+    <div class="container">
+      <div class="grid lg:grid-cols-2 gap-10 items-center">
+        <div>
+          <h1 class="text-5xl lg:text-6xl xl:text-7xl font-bold lg:tracking-tight">
+            Making AI fit anywhere.
+          </h1>
+          <p class="text-lg mt-4 text-capicu-navy-600 max-w-xl">
+            Capicú is a Puerto Rico-based company that challenges the current workflow of AI/ML deployment. We're making AI fit where it's needed and traditionally unreachable.
+          </p>
+          <div class="mt-6 flex flex-col sm:flex-row gap-3">
+            <a href="/get-started" class="btn btn-primary">
+              Get Started
+            </a>
+            <a href="/demo" class="btn btn-secondary">
+              Live Demo
+            </a>
+          </div>
+        </div>
+        <div class="hidden lg:block ml-8">
+          <img src="/hero.png" alt="Capicú Logo" class="h-[32rem] w-auto" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Code Demo Section -->
+  <section class="py-16 bg-capicu-off-white">
+    <div class="container">
+      <CodeDemo client:load />
+    </div>
+  </section>
+
+  <!-- Features Section
+  <section class="py-16 bg-capicu-off-white">
+    <div class="container">
+      <h2 class="text-4xl font-bold text-center mb-4">
+        Everything you need for Edge AI
+      </h2>
+      <p class="text-lg text-capicu-navy-600 text-center max-w-3xl mx-auto">
+        Capicú comes batteries included. It takes the best parts of state-of-the-art tools and adds its own innovations.
+      </p>
+      <Features client:load />
+    </div>
+  </section> -->
+
+  <!-- CTA Section
+  <section class="bg-capicu-primary">
+    <div class="container py-20">
+      <h2 class="text-3xl font-bold text-center text-white">
+        Ready to deploy AI anywhere?
+      </h2>
+      <p class="text-lg mt-4 text-center text-white/80 max-w-3xl mx-auto">
+        Join the future of edge AI deployment with Capicú's innovative tools and solutions.
+      </p>
+      <div class="flex gap-3 justify-center mt-8">
+        <a href="/get-started" class="btn bg-white text-capicu-primary hover:bg-capicu-beige">
+          Get Started
+        </a>
+        <a href="/contact" class="btn border border-white text-white hover:bg-capicu-navy-400">
+          Contact Us
+        </a>
+      </div>
+    </div>
+  </section> -->
 </Layout>

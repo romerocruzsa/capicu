@@ -11,6 +11,8 @@ import Button from "./ui/button.astro";
   class="needs-validation"
   novalidate>
   <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE" />
+  <input type="hidden" name="redirect" value="https://web3forms.com/success" />
+  <input type="hidden" name="to" value="romerocruzsa@gmail.com" />
   <!-- Create your free access key from https://web3forms.com/ -->
   <input type="checkbox" class="hidden" style="display:none" name="botcheck" />
   <div class="mb-5">
@@ -52,7 +54,7 @@ import Button from "./ui/button.astro";
       Please enter your message.
     </div>
   </div>
-  <Button type="submit" size="lg" block>Send Message</Button>
+  <Button type="submit" color="" size="lg" block>Send Message</Button>
   <div id="result" class="mt-3 text-center"></div>
 </form>
 

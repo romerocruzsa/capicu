@@ -1,4 +1,6 @@
-@import 'tailwindcss';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 @plugin '@tailwindcss/typography';
 
@@ -23,6 +25,44 @@
   ::before,
   ::backdrop,
   ::file-selector-button {
-    border-color: var(--color-gray-200, currentColor);
+    border-color: currentColor;
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply min-h-screen bg-capicu-beige text-capicu-navy-500;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading font-bold text-capicu-navy-500;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-lg text-base font-medium transition-colors duration-200;
+  }
+
+  .btn-primary {
+    @apply bg-capicu-primary text-white hover:bg-capicu-navy-600;
+  }
+
+  .btn-secondary {
+    @apply bg-white text-capicu-primary border border-capicu-primary hover:bg-capicu-beige;
+  }
+
+  .container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .prose {
+    @apply max-w-none;
+  }
+
+  .prose a {
+    @apply text-capicu-primary hover:text-capicu-navy-600;
   }
 }

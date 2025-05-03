@@ -3,7 +3,9 @@ import { SEO } from "astro-seo";
 import Footer from "@/components/footer.astro";
 import Navbar from "@/components/navbar/navbar.astro";
 import "@fontsource-variable/inter/index.css";
-import "@fontsource-variable/bricolage-grotesque";
+import "@fontsource/roboto/400.css";
+import "@fontsource/roboto/500.css";
+import "@fontsource/roboto/700.css";
 import "../styles/global.css";
 
 export interface Props {
@@ -11,59 +13,100 @@ export interface Props {
 }
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
-
-const resolvedImageWithDomain = new URL(
-  "/opengraph.jpg",
-  Astro.site
-).toString();
+const ogImage = new URL("/og-image.jpg", Astro.site).toString();
 
 const { title } = Astro.props;
 
 const makeTitle = title
-  ? title + " | " + "Astroship"
-  : "Astroship - Starter Template for Astro with Tailwind CSS";
+  ? title + " | " + "Capicú"
+  : "Capicú - Deploy AI Anywhere: From Clinic to Canopy";
 ---
 
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
 
-    <!-- <link rel="preload" as="image" href={src} alt="Hero" /> -->
     <SEO
       title={makeTitle}
-      description="Astroship is a starter website template for Astro built with TailwindCSS."
+      description="Capicú provides developer tools for deploying AI on any hardware, especially in low-resource environments. Modular, compression-aware, and explainable AI models for embedded systems."
       canonical={canonicalURL}
       twitter={{
-        creator: "@surjithctly",
-        site: "@web3templates",
         card: "summary_large_image",
       }}
       openGraph={{
         basic: {
           url: canonicalURL,
           type: "website",
-          title: `Astroship - Starter Template for Astro`,
-          image: resolvedImageWithDomain,
-        },
-        image: {
-          alt: "Astroship Homepage Screenshot",
+          title: makeTitle,
+          image: ogImage,
         },
       }}
     />
   </head>
-  <body>
-    <Navbar />
-    <slot />
-    <Footer />
+  <body class="bg-capicu-off-white text-capicu-charcoal">
+    <div class="min-h-screen flex flex-col">
+      <Navbar />
+      <main class="flex-grow">
+        <slot />
+      </main>
+      <Footer />
+    </div>
     <style is:global>
-      /* Improve Page speed */
-      /* https://css-tricks.com/almanac/properties/c/content-visibility/ */
+      :root {
+        --capicu-primary: #003A5D;
+        --capicu-accent: #D8272D;
+        --capicu-off-white: #F9F5EA;
+        --capicu-charcoal: #2C2C2E;
+      }
+      
+      body {
+        font-family: 'Roboto', system-ui, -apple-system, sans-serif;
+        background-color: var(--capicu-off-white);
+        color: var(--capicu-charcoal);
+      }
+      
+      h1, h2, h3, h4, h5, h6 {
+        font-family: 'Inter Variable', system-ui, -apple-system, sans-serif;
+        color: var(--capicu-primary);
+      }
+      
       img {
         content-visibility: auto;
+      }
+
+      .btn-primary {
+        background-color: var(--capicu-primary);
+        color: white;
+      }
+
+      .btn-primary:hover {
+        background-color: #002E4A;
+      }
+
+      .btn-secondary {
+        background-color: white;
+        color: var(--capicu-primary);
+        border: 1px solid var(--capicu-primary);
+      }
+
+      .btn-secondary:hover {
+        background-color: var(--capicu-off-white);
+      }
+
+      .text-accent {
+        color: var(--capicu-accent);
+      }
+
+      .bg-accent {
+        background-color: var(--capicu-accent);
+      }
+
+      .border-accent {
+        border-color: var(--capicu-accent);
       }
     </style>
   </body>

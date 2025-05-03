@@ -9,36 +9,74 @@ import { Icon } from "astro-icon/components";
 <Layout title="Contact">
   <Container>
     <Sectionhead>
-      <Fragment slot="title">Contact</Fragment>
-      <Fragment slot="desc">We are a here to help.</Fragment>
+      <Fragment slot="title">Get in Touch</Fragment>
+      <Fragment slot="desc">Let's discuss how Capicú can optimize your AI models for any hardware target.</Fragment>
     </Sectionhead>
 
     <div class="grid md:grid-cols-2 gap-10 mx-auto max-w-4xl mt-16">
-      <div>
-        <h2 class="font-medium text-2xl text-gray-800">Contact Astroship</h2>
-        <p class="text-lg leading-relaxed text-slate-500 mt-3">
-          Have something to say? We are here to help. Fill up the form or send
-          email or call phone.
-        </p>
-        <div class="mt-5">
-          <div class="flex items-center mt-2 space-x-2 text-gray-600">
-            <Icon class="text-gray-400 w-4 h-4" name="uil:map-marker" />
-            <span>1734 Sanfransico, CA 93063</span>
-          </div><div class="flex items-center mt-2 space-x-2 text-gray-600">
-            <Icon class="text-gray-400 w-4 h-4" name="uil:envelope" /><a
-              href="mailto:hello@astroshipstarter.com"
-              >hello@astroshipstarter.com</a
-            >
-          </div><div class="flex items-center mt-2 space-x-2 text-gray-600">
-            <Icon class="text-gray-400 w-4 h-4" name="uil:phone" /><a
-              href="tel:+1 (987) 4587 899">+1 (987) 4587 899</a
-            >
+      <div class="space-y-8">
+        <div>
+          <h2 class="font-semibold text-2xl text-capicu-primary">Contact Capicú</h2>
+          <p class="text-lg leading-relaxed text-capicu-navy-600 mt-3">
+            Have questions about our compression engine? Want to discuss a specific use case? 
+            We're here to help you optimize your AI models for any hardware environment.
+          </p>
+        </div>
+
+        <div class="space-y-4">
+          <div class="flex items-center space-x-3 text-capicu-navy-600">
+            <Icon class="text-capicu-accent w-5 h-5" name="uil:map-marker" />
+            <span>Mayagüez, PR, 00680</span>
+          </div>
+          <div class="flex items-center space-x-3 text-capicu-navy-600">
+            <Icon class="text-capicu-accent w-5 h-5" name="uil:envelope" />
+            <a href="mailto:info@capicu.com" class="hover:text-capicu-primary transition-colors">
+              info@capicu.com
+            </a>
+          </div>
+          <div class="flex items-center space-x-3 text-capicu-navy-600">
+            <Icon class="text-capicu-accent w-5 h-5" name="uil:phone" />
+            <a href="tel:+1 (787) 802 4040" class="hover:text-capicu-primary transition-colors">
+              +1 (787) 802 4040
+            </a>
+          </div>
+        </div>
+
+        <div class="pt-6">
+          <h3 class="font-semibold text-xl text-capicu-primary mb-4">Connect With Us</h3>
+          <div class="flex space-x-4">
+            <a href="#" class="text-capicu-navy-600 hover:text-capicu-primary transition-colors">
+              <Icon class="w-6 h-6" name="uil:github" />
+            </a>
+            <a href="#" class="text-capicu-navy-600 hover:text-capicu-primary transition-colors">
+              <Icon class="w-6 h-6" name="uil:instagram" />
+            </a>
+            <a href="#" class="text-capicu-navy-600 hover:text-capicu-primary transition-colors">
+              <Icon class="w-6 h-6" name="uil:linkedin" />
+            </a>
           </div>
         </div>
       </div>
+
       <div>
         <Contactform />
       </div>
     </div>
+    <br />
+
+    <!-- <div class="mt-20">
+      <h2 class="font-semibold text-2xl text-capicu-primary text-center mb-8">Our Location</h2>
+      <div class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden center">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3784.123456789012!2d-67.12345678901234!3d18.12345678901234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTjCsDA3JzI0LjQiTiA2N8KwMDcnMjQuNCJX!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus"
+          width="200"
+          height="200"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </div> -->
   </Container>
 </Layout>
