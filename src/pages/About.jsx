@@ -20,9 +20,33 @@ const team = [
   },
   {
     name: "This could be you!",
-    title: "Developer, Engineer or Scientist",
+    title: "Open roles available",
     bio: "We're always looking for new talent to join our team. Open to students and new grads with experience in: AI/ML, DevOps, Database Systems, UI/UX, and more. If you're interested in joining the team at Capicú, please reach out to us!",
-    photo: "https://avatars.githubusercontent.com/u/2164692?v=4",
+    photo: "https://randomuser.me/api/portraits/lego/7.jpg",
+    socials: {
+      email: "mailto:romerocruzsa@gmail.com"
+    }
+  }
+];
+
+const collaborators = [
+  {
+    name: "Open for collaborations",
+    title: "Researchers, PIs, and more",
+    bio: "We're always looking for ways to integrate new applications for our technologies. If you're interested in collaborating with Capicú, please reach out to us!",
+    photo: "https://randomuser.me/api/portraits/lego/9.jpg",
+    socials: {
+      email: "mailto:romerocruzsa@gmail.com"
+    }
+  },
+];
+
+const partnerships = [
+  {
+    name: "Your organization here!",
+    title: "Non-profit, company, or lab",
+    bio: "We're always looking for new partners to expand our network and implement new technologies. If you're interested in partnering with Capicú, please reach out to us!",
+    photo: "https://randomuser.me/api/portraits/lego/1.jpg",
     socials: {
       email: "mailto:romerocruzsa@gmail.com"
     }
@@ -30,59 +54,106 @@ const team = [
 ];
 
 export default function About() {
-  const [order, setOrder] = useState([...team.keys()]);
+  const [order, setOrder] = useState([...Array(team.length).keys()]);
 
   const shuffle = () => {
     setOrder((prev) => {
       const [first, ...rest] = prev;
-      return [...rest, first]; // move top to back
+      return [...rest, first];
     });
   };
 
   useEffect(() => {
-    const interval = setInterval(shuffle, 6000);
+    const interval = setInterval(shuffle, 10000);
     return () => clearInterval(interval);
   }, []);
 
   return (
     <div className="about-bg">
-      <div className="about-credit">
-        Photo by <a href="https://unsplash.com/@julioguio" target="_blank" rel="noopener noreferrer">Julio Guio</a> on <a href="https://unsplash.com/photos/photo-1566786987239-925e414ddbe0" target="_blank" rel="noopener noreferrer">Unsplash</a>
-      </div>
-      <div className="about-sections">
-        <h1 className="about-section-title">Meet the Team</h1>
-        <button className="deck-button-top" onClick={shuffle}>→</button>
-        <div className="about-profiles about-deck">
-          {order.map((idx, i) => {
-            const profile = team[idx];
-            const isTop = i === 0;
+      <div className="about-sections-wrapper">
+        <div className="about-sections">
+          <div className="about-section">
+            <h2 className="about-section-title">
+              Meet the Team <button className="deck-button-bottom" onClick={shuffle}>→</button>
+            </h2>
+            <div className="about-profiles about-deck">
+              {order.map((idx, i) => {
+                const profile = team[idx];
+                const isTop = i === 0;
+                return (
+                  <div
+                    key={idx}
+                    className={`about-profile-card deck-card ${isTop ? "top" : ""}`}
+                    style={{
+                      zIndex: team.length - i,
+                      transform: `translate(${i * 8}px, ${i * 8}px)`,
+                      opacity: i > 2 ? 0 : 1
+                    }}
+                  >
+                    <img src={profile.photo} alt={profile.name} className="about-profile-photo" />
+                    <div className="about-profile-info">
+                      <h3>{profile.name}</h3>
+                      <div className="about-profile-title">{profile.title}</div>
+                      <div className="about-profile-bio">{profile.bio}</div>
+                      <div className="about-profile-socials">
+                        {profile.socials.linkedin && <a href={profile.socials.linkedin}><FaLinkedin /></a>}
+                        {profile.socials.github && <a href={profile.socials.github}><FaGithub /></a>}
+                        {profile.socials.instagram && <a href={profile.socials.instagram}><FaInstagram /></a>}
+                        {profile.socials.website && <a href={profile.socials.website}><FaGlobe /></a>}
+                        {profile.socials.email && <a href={profile.socials.email}><FaEnvelopeOpenText /></a>}
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
 
-            return (
-              <div
-                key={idx}
-                className={`about-profile-card deck-card ${isTop ? "top" : ""}`}
-                style={{
-                  zIndex: team.length - i,
-                  transform: `translate(${i * 8}px, ${i * 8}px)`,
-                  opacity: i > 2 ? 0 : 1
-                }}
-              >
-                <img src={profile.photo} alt={profile.name} className="about-profile-photo" />
-                <div className="about-profile-info">
-                  <h2>{profile.name}</h2>
-                  <div className="about-profile-title">{profile.title}</div>
-                  <div className="about-profile-bio">{profile.bio}</div>
-                  <div className="about-profile-socials">
-                    <a href={profile.socials.linkedin} target="_blank" rel="noopener noreferrer"><FaLinkedin /></a>
-                    <a href={profile.socials.github} target="_blank" rel="noopener noreferrer"><FaGithub /></a>
-                    <a href={profile.socials.instagram} target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
-                    <a href={profile.socials.website} target="_blank" rel="noopener noreferrer"><FaGlobe /></a>
-                    <a href={profile.socials.email} target="_blank" rel="noopener noreferrer"><FaEnvelopeOpenText /></a>
+          <div className="about-section">
+            <h2 className="about-section-title">Our Collaborators</h2>
+            <div className="about-profiles-scroll">
+              {collaborators.map((profile, idx) => (
+                <div key={idx} className="about-profile-card">
+                  <img src={profile.photo} alt={profile.name} className="about-profile-photo" />
+                  <div className="about-profile-info">
+                    <h3>{profile.name}</h3>
+                    <div className="about-profile-title">{profile.title}</div>
+                    <div className="about-profile-bio">{profile.bio}</div>
+                    <div className="about-profile-socials">
+                      {profile.socials.linkedin && <a href={profile.socials.linkedin}><FaLinkedin /></a>}
+                      {profile.socials.github && <a href={profile.socials.github}><FaGithub /></a>}
+                      {profile.socials.instagram && <a href={profile.socials.instagram}><FaInstagram /></a>}
+                      {profile.socials.website && <a href={profile.socials.website}><FaGlobe /></a>}
+                      {profile.socials.email && <a href={profile.socials.email}><FaEnvelopeOpenText /></a>}
+                    </div>
                   </div>
                 </div>
-              </div>
-            );
-          })}
+              ))}
+            </div>
+          </div>
+
+          <div className="about-section">
+            <h2 className="about-section-title">Partnerships</h2>
+            <div className="about-profiles-scroll">
+              {partnerships.map((profile, idx) => (
+                <div key={idx} className="about-profile-card">
+                  <img src={profile.photo} alt={profile.name} className="about-profile-photo" />
+                  <div className="about-profile-info">
+                    <h3>{profile.name}</h3>
+                    <div className="about-profile-title">{profile.title}</div>
+                    <div className="about-profile-bio">{profile.bio}</div>
+                    <div className="about-profile-socials">
+                      {profile.socials.linkedin && <a href={profile.socials.linkedin}><FaLinkedin /></a>}
+                      {profile.socials.github && <a href={profile.socials.github}><FaGithub /></a>}
+                      {profile.socials.instagram && <a href={profile.socials.instagram}><FaInstagram /></a>}
+                      {profile.socials.website && <a href={profile.socials.website}><FaGlobe /></a>}
+                      {profile.socials.email && <a href={profile.socials.email}><FaEnvelopeOpenText /></a>}
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </div>
