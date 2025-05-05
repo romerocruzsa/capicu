@@ -7,7 +7,7 @@ import "./App.css";
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/capicu">
       <div className="app">
         <Navbar />
         <main>
