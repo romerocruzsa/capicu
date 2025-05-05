@@ -1,0 +1,204 @@
+.about-bg {
+  min-height: 100vh;
+  min-width: 100vw;
+  width: 100vw;
+  height: 100vh;
+  background: url('https://images.unsplash.com/photo-1566786987239-925e414ddbe0?q=80&w=2592&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') center center/cover no-repeat fixed;
+  position: fixed;
+  top: 0; left: 0;
+  z-index: 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.about-bg::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(249, 245, 234, 0.45);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.about-credit {
+  position: absolute;
+  top: 0.7rem;
+  right: 1.5rem;
+  z-index: 3;
+  font-size: 0.95rem;
+  color: var(--navy);
+  background: rgba(255,255,255,0.7);
+  padding: 0.3em 0.8em;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(10,26,47,0.07);
+}
+
+.about-credit a {
+  color: var(--red);
+  text-decoration: underline;
+}
+
+.about-sections {
+  position: relative;
+  z-index: 2;
+  width: 100vw;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem 2rem 1.5rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about-section-title {
+  font-size: 2.1rem;
+  font-weight: 800;
+  color: var(--beige);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  margin-bottom: 2.2rem;
+  letter-spacing: -0.5px;
+  text-align: left;
+}
+
+.about-profiles {
+  display: flex;
+  flex-direction: row;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.about-profile-card {
+  background: var(--beige);
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(10,26,47,0.10);
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 2.2rem 2.2rem 2.2rem 1.5rem;
+  min-width: 340px;
+  max-width: 540px;
+  width: 100%;
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+  animation: card-fade-in 0.9s cubic-bezier(0.23, 1, 0.32, 1) 0.1s both;
+}
+
+@keyframes card-fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(40px) scale(0.98);
+  }
+  80% {
+    opacity: 1;
+    transform: translateY(-4px) scale(1.01);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.about-profile-photo {
+  width: 110px;
+  height: 110px;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 2px 12px rgba(10,26,47,0.10);
+  background: #fff;
+  flex-shrink: 0;
+}
+
+.about-profile-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 1 1 0;
+}
+
+.about-profile-info h2 {
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin: 0 0 0.2rem 0;
+  color: var(--navy);
+}
+
+.about-profile-title {
+  color: var(--red);
+  font-weight: 600;
+  margin-bottom: 0.7rem;
+  font-size: 1.08rem;
+}
+
+.about-profile-bio {
+  color: var(--navy);
+  font-size: 1.05rem;
+  margin-bottom: 1.1rem;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.about-profile-socials {
+  display: flex;
+  gap: 1.1rem;
+  margin-top: 0.2rem;
+}
+
+.about-profile-socials a {
+  color: var(--navy);
+  font-size: 1.5rem;
+  transition: color 0.2s, transform 0.2s;
+  display: flex;
+  align-items: center;
+}
+
+.about-profile-socials a:hover {
+  color: var(--red);
+  transform: scale(1.15) rotate(-6deg);
+}
+
+.about-join-card {
+  background: #f9f5ea;
+  border: 2px dashed var(--red);
+  animation-delay: 0.35s;
+}
+
+.about-join-card .about-profile-title {
+  color: var(--navy);
+}
+
+.about-join-card .about-profile-socials a {
+  color: var(--red);
+}
+
+.about-join-card .about-profile-socials a:hover {
+  color: var(--navy);
+  transform: scale(1.15) rotate(6deg);
+}
+
+@media (max-width: 900px) {
+  .about-profiles {
+    flex-direction: column;
+    gap: 2rem;
+    align-items: stretch;
+  }
+  .about-profile-card {
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem 1rem;
+    gap: 1.2rem;
+    min-width: 0;
+    max-width: 98vw;
+  }
+  .about-profile-photo {
+    border-radius: 50%;
+    width: 90px;
+    height: 90px;
+  }
+  .about-section-title {
+    text-align: center;
+  }
+} 
