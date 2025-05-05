@@ -18,7 +18,7 @@ export default function Home() {
       <section className="hero" id="hero">
         <div className="hero-content hero-row">
           <div className="hero-text">
-            <h1>Edge AI Optimized For You</h1>
+            <h1>Making AI Fit Anywhere</h1>
             <p className="tagline">
               Capicú specializes in deploying ML models optimized for your target hardware, with a focus on biomedical and medical tech. <strong>Your data, your hardware, your needs.</strong>
             </p>
