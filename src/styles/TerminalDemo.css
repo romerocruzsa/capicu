@@ -23,6 +23,7 @@
   overflow: hidden;
   margin-bottom: 1.5rem;
   width: 100%;
+  box-shadow: 0 4px 24px rgba(10, 26, 47, 0.25);
 }
 
 .terminal-header {

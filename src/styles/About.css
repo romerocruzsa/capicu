@@ -273,7 +273,7 @@
 }
 .profile-card-back {
   transform: rotateY(180deg);
-  background: var(--beige);
+  background: #fff;
   flex-direction: column;
   padding: 1.2rem 1rem;
   justify-content: flex-start;
@@ -322,7 +322,7 @@
 .profile-label {
   margin-top: 0.5rem;
   width: 100%;
-  text-align: left;
+  text-align: center;
 }
 .profile-name {
   font-size: 1.08rem;

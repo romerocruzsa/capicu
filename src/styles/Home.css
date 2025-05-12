@@ -171,7 +171,7 @@
   background: var(--beige);
   border: 1px solid rgba(10, 26, 47, 0.08);
   border-radius: 18px;
-  box-shadow: 0 2px 12px rgba(10, 26, 47, 0.04);
+  box-shadow: 0 4px 24px rgba(10, 26, 47, 0.25);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -180,7 +180,7 @@
 }
 
 .service-card:hover {
-  box-shadow: 0 8px 32px rgba(220, 53, 69, 0.10);
+  box-shadow: 0 4px 24px rgba(10, 26, 47, 0.25);
   transform: translateY(-6px) scale(1.03);
   border-color: var(--red);
 }

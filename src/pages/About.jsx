@@ -31,36 +31,46 @@ const team = [
 
 const collaborators = [
   {
-    name: "Open for collaborations",
-    title: "Researchers, PIs, and more",
-    bio: "Always looking for ways to integrate new applications for our technologies.",
-    photo: "https://github.com/identicons/mwhite.png",
+    name: "Edge Computing Group",
+    title: "University of Puerto Rico at Mayagüez",
+    // bio: "Always looking for ways to integrate new applications for our technologies.",
+    photo: "https://edge-computing-upr.github.io/web/images/logos/ecglogo_ver.png",
     socials: {
-      email: "mailto:romerocruzsa@gmail.com"
+      website: "https://edge-computing-upr.github.io/web",
+      email: "mailto:wilfredo.lugo1@upr.edu"
     }
   },
+  // {
+  //   name: "Open for collaborations",
+  //   title: "Researchers, PIs, and more",
+  //   bio: "Always looking for ways to integrate new applications for our technologies.",
+  //   photo: "https://github.com/identicons/mwhite.png",
+  //   socials: {
+  //     email: "mailto:romerocruzsa@gmail.com"
+  //   }
+  // },
 ];
 
 const partnerships = [
   {
     name: "Perspectivas Globales",
-    title: "Creative space devoted to empowering entrepreneurs in the West Side of Puerto Rico.",
-    bio: "Creative space devoted to empowering entrepreneurs in the West Side of Puerto Rico.",
+    title: "Entrepeneruship space devoted to support emerging founders in the West Side of Puerto Rico.",
+    // bio: "Creative space devoted to empowering entrepreneurs in the West Side of Puerto Rico.",
     photo: "https://perspectivasglobales.com/wp-content/uploads/2022/01/PG-Logosquared.png",
     socials: {
       website: "https://perspectivasglobales.com",
       email: "mailto:info@ocapr.org"
     }
   },
-  {
-    name: "Your organization here!",
-    title: "Non-profit, company, or lab",
-    bio: "If you're interested in partnering with Capicú, please reach out to us!",
-    photo: "https://identicons.github.com/jasonlong.png",
-    socials: {
-      email: "mailto:romerocruzsa@gmail.com"
-    }
-  }
+  // {
+  //   name: "Your organization here!",
+  //   title: "Non-profit, company, or lab",
+  //   bio: "If you're interested in partnering with Capicú, please reach out to us!",
+  //   photo: "https://identicons.github.com/jasonlong.png",
+  //   socials: {
+  //     email: "mailto:romerocruzsa@gmail.com"
+  //   }
+  // }
 ];
 
 function ProfileCard({ profile }) {
