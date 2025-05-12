@@ -4,22 +4,41 @@ import "../styles/TerminalDemo.css";
 
 const PROMPT = "(capicu) user@device $ ";
 
+// const demoScript = [
+//   { type: "input", value: "python compress.py --model SimpleCNN --dataset MNIST --epochs 25 --compression ptq", delay: 60 },
+//   { type: "output", value: "", delay: 300 },
+//   { type: "output", value: "🔍 Loading dataset... Done.", delay: 600 },
+//   { type: "output", value: "🧠 Training baseline model... Done.", delay: 1200 },
+//   { type: "output", value: "⚡ Applying Compression... Done.", delay: 1200 },
+//   { type: "output", value: "⚡ Post-training Quantization (INT8)... Done.", delay: 900 },
+//   { type: "output", value: "", delay: 200 },
+//   { type: "output", value: "Results:", delay: 200 },
+//   { type: "output", value: "  Accuracy:     0.66  → 0.62", delay: 120 },
+//   { type: "output", value: "  Latency:      15ms  → 9ms", delay: 120 },
+//   { type: "output", value: "  RAM:          800MB → 560MB", delay: 120 },
+//   { type: "output", value: "  Size:         50MB  → 37.5MB", delay: 120 },
+//   { type: "output", value: "  Throughput:   1000  → 1500 img/s", delay: 120 },
+//   { type: "output", value: "", delay: 200 },
+//   { type: "output", value: "AURORA Score: 0.67", delay: 200 },
+// ];
+
 const demoScript = [
-  { type: "input", value: "python compress.py --model SimpleCNN --dataset MNIST --epochs 25 --compression ptq", delay: 60 },
-  { type: "output", value: "", delay: 300 },
-  { type: "output", value: "🔍 Loading dataset... Done.", delay: 600 },
-  { type: "output", value: "🧠 Training baseline model... Done.", delay: 1200 },
-  { type: "output", value: "⚡ Applying Compression... Done.", delay: 1200 },
-  { type: "output", value: "⚡ Post-training Quantization (INT8)... Done.", delay: 900 },
+  { type: "input", value: "compression-engine --model resnet18 --dataset mnist --epochs 25 --config ptq", delay: 60 },
+  { type: "output", value: "[⚙️] Loading MNIST Dataset...", delay: 600 },
+  { type: "output", value: "[✓] Exported model to output/resnet18.onnx", delay: 300 },
+  { type: "output", value: "[⚙️] Quantizing output/resnet18.onnx → output/resnet18.quant.onnx", delay: 600 },
+  { type: "output", value: "[✓] Quantized model saved at output/resnet18.quant.onnx", delay: 600 },
+  { type: "output", value: "[📊] Evaluating output/resnet18.onnx: 100%", delay: 800 },
+  { type: "output", value: "[📊] Evaluating output/resnet18.quant.onnx: 100%", delay: 800 },
+  { type: "output", value: "[📊] Evaluation Summary", delay: 400 },
+  { type: "output", value: "  Metric:           Baseline  →   Compressed", delay: 200 },
+  { type: "output", value: "  Top-1 Accuracy:   0.82      →   0.79", delay: 200 },
+  { type: "output", value: "  Latency (s):      1.06      →   0.64", delay: 200 },
+  { type: "output", value: "  RAM Usage (MB):   0.25      →   0.06", delay: 200 },
+  { type: "output", value: "  Model Size (MB):  44.72     →   11.23", delay: 200 },
+  { type: "output", value: "  Power Proxy (W):  11.07     →   9.92", delay: 200 },
   { type: "output", value: "", delay: 200 },
-  { type: "output", value: "Results:", delay: 200 },
-  { type: "output", value: "  Accuracy:     0.66  → 0.62", delay: 120 },
-  { type: "output", value: "  Latency:      15ms  → 9ms", delay: 120 },
-  { type: "output", value: "  RAM:          800MB → 560MB", delay: 120 },
-  { type: "output", value: "  Size:         50MB  → 37.5MB", delay: 120 },
-  { type: "output", value: "  Throughput:   1000  → 1500 img/s", delay: 120 },
-  { type: "output", value: "", delay: 200 },
-  { type: "output", value: "AURORA Score: 0.67", delay: 200 },
+  { type: "output", value: "[💎] AURORA Score: 2.380", delay: 200 },
 ];
 
 export default function TerminalDemo() {

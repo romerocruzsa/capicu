@@ -1,0 +1,129 @@
+.footer.b2b-footer {
+    width: 100%;
+    background: var(--beige);
+    color: var(--beige);
+    font-size: 0.98rem;
+    letter-spacing: 0.01em;
+    margin-top: 4rem;
+    border-top: 1px solid var(--navy);
+    box-sizing: border-box;
+  }
+  
+  .footer-divider {
+    display: none;
+  }
+  
+  .footer-content,
+  .footer-bottom {
+    max-width: 1280px;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .footer-content {
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+    padding: 3rem 2rem 2rem 2rem;
+    justify-content: flex-start;
+  }
+  
+  .footer-col {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    min-width: 120px;
+  }
+  
+  .brand-col {
+    min-width: 180px;
+    gap: 0.7rem;
+  }
+  
+  .footer-logo {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 0.2rem;
+  }
+  
+  .footer-tagline {
+    font-size: 1rem;
+    color: #86868b;
+  }
+  
+  .footer-col-title {
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 0.3rem;
+    font-size: 1.05rem;
+  }
+  
+  .footer-col a, .footer-legal a {
+    color: #86868b;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 0.98rem;
+    transition: color 0.2s;
+    margin-bottom: 0.1rem;
+  }
+  .footer-col a:hover, .footer-legal a:hover {
+    color: var(--navy);
+    text-decoration: underline;
+  }
+  
+  .footer-bottom {
+    padding: 1.2rem 2rem 2.2rem 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid var(--beige);
+    font-size: 0.93rem;
+    color: #86868b;
+    gap: 1rem;
+  }
+  
+  .footer-legal {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+  }
+  
+  .footer-socials {
+    display: flex;
+    gap: 1.1rem;
+  }
+  .footer-socials a {
+    color: var(--navy);
+    font-size: 1.5rem;
+    transition: color 0.2s, transform 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    background: var(--beige);
+    /* border: 1px solid rgba(10, 26, 47, 0.08); */
+  }
+  .footer-socials a:hover {
+    color: var(--red);
+    transform: scale(1.1);
+    border-color: var(--red);
+  }
+  
+  @media (max-width: 900px) {
+    .footer-content {
+      flex-direction: column;
+      gap: 2.5rem;
+      padding: 2rem 1rem 1rem 1rem;
+    }
+    .footer-bottom {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.7rem;
+      padding: 1.2rem 1rem 1.2rem 1rem;
+    }
+  }

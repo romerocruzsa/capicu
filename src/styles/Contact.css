@@ -122,9 +122,7 @@
   .contact-background {
     padding: 1rem;
   }
-}
-
-.contact-overlay {
+}.contact-overlay {
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
   background: rgba(249, 245, 234, 0.55);
@@ -134,3 +132,4 @@
   justify-content: center;
   padding: 2rem;
 }
+
