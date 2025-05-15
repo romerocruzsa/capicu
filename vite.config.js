@@ -4,7 +4,7 @@ import react from '@vitejs/plugin-react';
 import { fileURLToPath } from 'url';
 
 export default defineConfig({
-  base: '/capicu/', // MUST match your GitHub repo name
+  base: '/', // Changed from '/capicu/' to '/' for custom domain
   assetsInclude: ['**/README.md', '**/template.md'],
   plugins: [
     react(),
