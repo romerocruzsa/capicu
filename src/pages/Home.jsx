@@ -2,9 +2,12 @@ import { Link } from "react-router-dom";
 import TerminalDemo from "../components/TerminalDemo";
 import logoSolo from "../assets/logo-solo.png";
 import { FaBrain, FaCode, FaDatabase, FaTachometerAlt, FaRocket, FaLayerGroup, FaCloud, FaTools } from "react-icons/fa";
+import { useForm, ValidationError } from "@formspree/react";
 import "../styles/Home.css";
 
 export default function Home() {
+  const [state, handleSubmit] = useForm("mnnddqko");
+
   return (
     <div className="home">
       {/* Hero Section */}
@@ -38,75 +41,42 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Services Section
-      <section className="services">
-        <h2>Our Services</h2>
-        <p className="section-description">
-          Comprehensive solutions for your AI and software needs
-        </p>
-        <div className="services-grid">
-          <div className="service-card">
-            <div className="service-icon">
-              <FaBrain className="service-icon-symbol" />
-            </div>
-            <div className="service-content">
-              <h3>ML & Data Science Consulting</h3>
-              <p>
-                From data analysis to model deployment, we provide end-to-end machine learning solutions. We help you navigate the complex landscape of AI implementation.
-              </p>
-              <div className="service-features">
-                <div className="service-feature">
-                  <FaCode className="feature-icon" />
-                  <span>Custom ML model development</span>
-                </div>
-                <div className="service-feature">
-                  <FaDatabase className="feature-icon" />
-                  <span>Data pipeline architecture</span>
-                </div>
-                <div className="service-feature">
-                  <FaTachometerAlt className="feature-icon" />
-                  <span>Performance optimization</span>
-                </div>
-                <div className="service-feature">
-                  <FaRocket className="feature-icon" />
-                  <span>Deployment strategy</span>
-                </div>
-              </div>
-            </div>
+      {/* Contact Section */}
+      <section className="contact-section">
+        <h2>Contact Us</h2>
+        <p className="section-description">Have a project or question? Reach out and we'll get back to you soon.</p>
+        
+        {state.succeeded ? (
+          <div className="contact-success">
+            <h2>Thank you!</h2>
+            <p>Your message has been sent. We'll be in touch soon.</p>
           </div>
+        ) : (
+          <form className="contact-form" onSubmit={handleSubmit}>
+            <label htmlFor="name">
+              Name
+              <input id="name" type="text" name="name" required />
+            </label>
+            <ValidationError prefix="Name" field="name" errors={state.errors} />
 
-          <div className="service-card">
-            <div className="service-icon">
-              <FaCode className="service-icon-symbol" />
-            </div>
-            <div className="service-content">
-              <h3>Application Development</h3>
-              <p>
-                Transform your ideas into production-ready applications. We aid in building scalable, high-performance software solutions.
-              </p>
-              <div className="service-features">
-                <div className="service-feature">
-                  <FaLayerGroup className="feature-icon" />
-                  <span>Full-stack development</span>
-                </div>
-                <div className="service-feature">
-                  <FaCloud className="feature-icon" />
-                  <span>Cloud-native architecture</span>
-                </div>
-                <div className="service-feature">
-                  <FaTools className="feature-icon" />
-                  <span>DevOps & CI/CD</span>
-                </div>
-                <div className="service-feature">
-                  <FaTachometerAlt className="feature-icon" />
-                  <span>Performance optimization</span>
-                </div>
-              </div>
-            </div>
-          </div>
-      
-        </div>
-      </section> */}
+            <label htmlFor="email">
+              Email
+              <input id="email" type="email" name="email" required />
+            </label>
+            <ValidationError prefix="Email" field="email" errors={state.errors} />
+
+            <label htmlFor="message">
+              Message
+              <textarea id="message" name="message" rows="5" required />
+            </label>
+            <ValidationError prefix="Message" field="message" errors={state.errors} />
+
+            <button type="submit" className="cta-button primary" disabled={state.submitting}>
+              {state.submitting ? "Sending..." : "Send Message"}
+            </button>
+          </form>
+        )}
+      </section>
     </div>
   );
 } 

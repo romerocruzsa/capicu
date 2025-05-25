@@ -7,7 +7,7 @@ import {
 const team = [
   {
     name: "Sebastián A. Cruz Romero",
-    title: "Chief Executive Officer, Co-founder",
+    title: "Co-founder",
     photo: "https://romerocruzsa.github.io/assets/img/avatar.png",
     socials: {
       linkedin: "https://www.linkedin.com/in/romerocruzsa",
@@ -19,7 +19,7 @@ const team = [
   },
   {
     name: "Misael J. Mercado Hernández",
-    title: "Chief Information Officer, Co-founder",
+    title: "Co-founder",
     photo: "https://avatars.githubusercontent.com/u/78518246?v=4",
     socials: {
       email: "mailto:misael.mercado1@upr.edu",
@@ -29,7 +29,7 @@ const team = [
   },
   {
     name: "Luis G. Luna Betancourt",
-    title: "Chief Operations Officer, Co-founder",
+    title: "Co-founder",
     photo: "https://media.licdn.com/dms/image/v2/D4E03AQHGSx2IXFrobw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1708748424156?e=1753920000&v=beta&t=3hHixUtmAqTqK1WyhqqQVGqWSVwamWbNsRkwWxU19ko",
     socials: {
       email: "mailto:luis.luna7@upr.edu",
@@ -39,7 +39,7 @@ const team = [
   },
   {
     name: "Walbert García Cruz",
-    title: "Chief Security Officer, Co-founder",
+    title: "Co-founder",
     photo: "https://media.licdn.com/dms/image/v2/D5603AQFvdnBa_c3zAg/profile-displayphoto-shrink_400_400/B56ZVokqVoGoAg-/0/1741216197042?e=1753920000&v=beta&t=D4gudnnSi_EcQNqmBu0WDKp89DUw27MLBqND8DWOfLo",
     socials: {
       email: "mailto:wgcengineering@gmail.com",
@@ -53,7 +53,6 @@ const collaborators = [
   {
     name: "Edge Computing Group",
     title: "University of Puerto Rico at Mayagüez",
-    // bio: "Always looking for ways to integrate new applications for our technologies.",
     photo: "https://edge-computing-upr.github.io/web/images/logos/ecglogo_ver.png",
     socials: {
       website: "https://edge-computing-upr.github.io/web",
@@ -63,7 +62,6 @@ const collaborators = [
   // {
   //   name: "Open for collaborations",
   //   title: "Researchers, PIs, and more",
-  //   bio: "Always looking for ways to integrate new applications for our technologies.",
   //   photo: "https://github.com/identicons/mwhite.png",
   //   socials: {
   //     email: "mailto:romerocruzsa@gmail.com"
@@ -75,7 +73,6 @@ const partnerships = [
   {
     name: "Perspectivas Globales",
     title: "Entrepreneurship space devoted to support emerging founders in the West Side of Puerto Rico.",
-    // bio: "Creative space devoted to empowering entrepreneurs in the West Side of Puerto Rico.",
     photo: "https://perspectivasglobales.com/wp-content/uploads/2022/01/PG-Logosquared.png",
     socials: {
       website: "https://perspectivasglobales.com",
