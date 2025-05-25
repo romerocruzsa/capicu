@@ -38,7 +38,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Services Section */}
+      {/* Services Section
       <section className="services">
         <h2>Our Services</h2>
         <p className="section-description">
@@ -104,8 +104,9 @@ export default function Home() {
               </div>
             </div>
           </div>
+      
         </div>
-      </section>
+      </section> */}
     </div>
   );
 } 

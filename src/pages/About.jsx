@@ -7,8 +7,7 @@ import {
 const team = [
   {
     name: "Sebastián A. Cruz Romero",
-    title: "Founder",
-    bio: `BSc in Computer Science and Engineering. Experience in AI/ML, Data Science, and Biomdical Engineering.`,
+    title: "Chief Executive Officer, Co-founder",
     photo: "https://romerocruzsa.github.io/assets/img/avatar.png",
     socials: {
       linkedin: "https://www.linkedin.com/in/romerocruzsa",
@@ -19,14 +18,35 @@ const team = [
     }
   },
   {
-    name: "This could be you!",
-    title: "Open roles available",
-    bio: "Open to students and new grads with experience in: AI/ML, DevOps, DBMS, and more.",
-    photo: "https://avatars.githubusercontent.com/u/627410?s=80&v=4",
+    name: "Misael J. Mercado Hernández",
+    title: "Chief Information Officer, Co-founder",
+    photo: "https://avatars.githubusercontent.com/u/78518246?v=4",
     socials: {
-      email: "mailto:romerocruzsa@gmail.com"
+      email: "mailto:misael.mercado1@upr.edu",
+      linkedin: "https://www.linkedin.com/in/misael-j-mercado/",
+      github: "https://github.com/misaelmercado1"
     }
-  }
+  },
+  {
+    name: "Luis G. Luna Betancourt",
+    title: "Chief Operations Officer, Co-founder",
+    photo: "https://media.licdn.com/dms/image/v2/D4E03AQHGSx2IXFrobw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1708748424156?e=1753920000&v=beta&t=3hHixUtmAqTqK1WyhqqQVGqWSVwamWbNsRkwWxU19ko",
+    socials: {
+      email: "mailto:luis.luna7@upr.edu",
+      linkedin: "https://www.linkedin.com/in/luis-luna787/",
+      github: "https://github.com/luisl7"
+    }
+  },
+  {
+    name: "Walbert García Cruz",
+    title: "Chief Security Officer, Co-founder",
+    photo: "https://media.licdn.com/dms/image/v2/D5603AQFvdnBa_c3zAg/profile-displayphoto-shrink_400_400/B56ZVokqVoGoAg-/0/1741216197042?e=1753920000&v=beta&t=D4gudnnSi_EcQNqmBu0WDKp89DUw27MLBqND8DWOfLo",
+    socials: {
+      email: "mailto:wgcengineering@gmail.com",
+      linkedin: "https://www.linkedin.com/in/walbert-garcia/",
+      github: "https://github.com/softwal"
+    }
+  },
 ];
 
 const collaborators = [
@@ -54,7 +74,7 @@ const collaborators = [
 const partnerships = [
   {
     name: "Perspectivas Globales",
-    title: "Entrepeneruship space devoted to support emerging founders in the West Side of Puerto Rico.",
+    title: "Entrepreneurship space devoted to support emerging founders in the West Side of Puerto Rico.",
     // bio: "Creative space devoted to empowering entrepreneurs in the West Side of Puerto Rico.",
     photo: "https://perspectivasglobales.com/wp-content/uploads/2022/01/PG-Logosquared.png",
     socials: {

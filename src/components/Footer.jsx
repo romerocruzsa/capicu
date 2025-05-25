@@ -31,10 +31,11 @@ export default function Footer() {
         </div> */}
       </div>
       <div className="footer-bottom">
-        {/* <div className="footer-copyright">
-          &copy; {new Date().getFullYear()} Capicú. All rights reserved.
+        <div className="footer-copyright">
+          {/* &copy; */}
+          Capicú Technologies LLC, Est. {new Date().getFullYear()}. All rights reserved.
         </div>
-        <div className="footer-legal">
+        {/* <div className="footer-legal">
           <Link to="/privacy-policy">Privacy Policy</Link>
           <span>·</span>
           <Link to="/terms">Terms</Link>
