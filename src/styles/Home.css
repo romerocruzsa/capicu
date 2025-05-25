@@ -164,12 +164,15 @@
 .cta-button.primary {
   background: var(--red);
   color: var(--beige);
+  width: 100%;
+  align-self: center;
 }
 
 .cta-button.secondary {
   background: transparent;
   color: var(--red);
   border: 2px solid var(--red);
+  width: 100%;
 }
 
 .cta-button:hover {
@@ -690,6 +693,7 @@
 .home .contact-form input:focus,
 .home .contact-form textarea:focus {
   border-color: var(--red);
+  width: 100%;
   outline: none;
 }
 

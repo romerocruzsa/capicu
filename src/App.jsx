@@ -5,6 +5,7 @@ import Contact from "./pages/Contact";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 import Navbar from "./components/Navbar";
+import MobileMenu from "./components/MobileMenu";
 import Footer from "./components/Footer";
 import "./App.css";
 
@@ -13,6 +14,7 @@ export default function App() {
     <BrowserRouter>
       <div className="app">
         <Navbar />
+        <MobileMenu />
         <main>
           <Routes>
             <Route path="/" element={<Home />} />

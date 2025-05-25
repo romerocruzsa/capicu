@@ -66,6 +66,12 @@
   width: 100%;
 }
 
+@media (max-width: 768px) {
+  .navbar {
+    display: none;
+  }
+}
+
 @media (max-width: 900px) {
   .navbar-inner {
     padding: 0 1rem;

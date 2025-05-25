@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import TerminalDemo from "../components/TerminalDemo";
-import MobileMenu from "../components/MobileMenu";
 import logoSolo from "../assets/logo-solo.png";
 import { FaBrain, FaCode, FaDatabase, FaTachometerAlt, FaRocket, FaLayerGroup, FaCloud, FaTools } from "react-icons/fa";
 import { useForm, ValidationError } from "@formspree/react";
@@ -11,8 +10,6 @@ export default function Home() {
 
   return (
     <div className="home">
-      <MobileMenu />
-      
       {/* Hero Section */}
       <section className="hero">
         <div className="hero-content hero-row">
